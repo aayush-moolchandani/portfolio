@@ -1,0 +1,57 @@
+.header {
+  height: 110vh;
+  padding: 7rem;
+  overflow: hidden;
+}
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.headers__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0rem;
+  bottom: 2rem;
+}
+.headers__socials::after {
+  background: var(--color-primary);
+  height: 2rem;
+  width: 1px;
+  content: "";
+}
+img{
+    margin-top: 2rem;
+    width: 50%;
+}
+@media screen and (max-width: 1024px) {
+    img{
+      width: 70%;
+    }
+   
+  }
+  
+  /* ========== sm devices ======= */
+  
+  @media screen and (max-width: 570px) {
+    .header {
+        height: 100vh;
+        padding: 5rem;
+    }
+    .headers__socials{
+        display: none;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  

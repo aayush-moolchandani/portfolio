@@ -1,0 +1,50 @@
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+.project_item {
+  background-color: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.project_item:hover {
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+}
+.project_item-img {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.img-project.img-project{
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.portfoli_item h3 {
+  margin: 1.2rem 0 2rem;
+}
+.project_item a {
+  margin: 1rem 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .project_container{
+    grid-template-columns: 1fr 1fr;
+    gap:1.2rem
+  }
+ 
+}
+
+/* ========== sm devices ======= */
+
+@media screen and (max-width: 570px) {
+  .project_container{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+}
+
