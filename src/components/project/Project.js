@@ -58,7 +58,7 @@ export default function Project() {
           </div>
           <h3>Random Feed</h3>
           <h4>(personal project NEXT)</h4>
-          <a href='https://next-js-feed-project.vercel.app/' className='btn'>
+          <a href='https://next-js-feed.vercel.app/' className='btn'>
             Live Demo
           </a>
         </article>
