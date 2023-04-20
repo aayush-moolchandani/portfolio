@@ -96,7 +96,14 @@ export default function Experince() {
             <article className='experience_details'>
               <BsPatchCheckFill className='icon' />
               <div>
-                <h4>React Server Side Rendering </h4>
+                <h4>React Native </h4>
+                <small className='text-light'>Basic</small>
+              </div>
+            </article>
+            <article className='experience_details'>
+              <BsPatchCheckFill className='icon' />
+              <div>
+                <h4>Nest js </h4>
                 <small className='text-light'>Basic</small>
               </div>
             </article>

@@ -1,8 +1,8 @@
 import React from "react";
 import mine from "../../assets/abt_me.webp";
-import {BiAward} from "react-icons/bi";
-import {AiOutlineProject} from "react-icons/ai";
-import './about.css'
+import { BiAward } from "react-icons/bi";
+import { AiOutlineProject } from "react-icons/ai";
+import "./about.css";
 
 export default function About() {
   return (
@@ -30,8 +30,10 @@ export default function About() {
             </article>
           </div>
           <p>
-            I am a front-end developer. I have 2 years of experience in React, Angular, Javascript, HTML, CSS and have a basic knowledge of Next. JS My current accomplishments include optimising my
-            page score to 75 (Google Lighthouse) and launching our product in Indonesia, where I dealt with translation for both react and angular.
+            I am a front-end developer with 2 years of experience in React, Angular, JavaScript, HTML, and CSS. I also have a basic knowledge of Next.js. One of my recent accomplishments was
+            optimizing the page score to 75 on Google Lighthouse. Additionally, I was responsible for launching our product in Indonesia, where I handled the translation for both React and Angular.
+            Recently, I have expanded my skillset to include back-end development using NestJS and have gained a basic understanding of AWS, including load balancers and other services. I am
+            passionate about staying up-to-date with the latest technologies and continuously improving my skills to deliver high-quality, user-friendly web applications.
           </p>
           <a href='#contact' className='btn btn_primary'>
             Let's Talk

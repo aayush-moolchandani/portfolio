@@ -35,6 +35,20 @@ export default function Service() {
            </h3>
          </div>
         </article>
+        <article className='service'>
+         <div className='service_head'>
+           <h3>
+           AWS Services
+           </h3>
+         </div>
+        </article>
+        <article className='service'>
+         <div className='service_head'>
+           <h3>
+          Nest.js (APIS)
+           </h3>
+         </div>
+        </article>
         
 
       </div>
