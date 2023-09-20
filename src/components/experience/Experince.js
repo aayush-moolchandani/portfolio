@@ -107,6 +107,13 @@ export default function Experince() {
                 <small className='text-light'>Basic</small>
               </div>
             </article>
+            <article className='experience_details'>
+              <BsPatchCheckFill className='icon' />
+              <div>
+                <h4>AWS </h4>
+                <small className='text-light'>Basic</small>
+              </div>
+            </article>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Header() {
       <div className='container header_container'>
         <h5>Hello I'm</h5>
         <h2>Aayush Moolchandani</h2>
-         <h5 className='text-light'>Frontend Developer</h5>
+         <h5 className='text-light'>Full stack Developer</h5>
          <div className='cta'>
            <a href={resume} download className='btn'>Download CV </a>
            <a href='#contact' className='btn btn-primary'>Lets Talk </a>

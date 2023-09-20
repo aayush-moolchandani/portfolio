@@ -33,7 +33,7 @@ export default function About() {
             I am a front-end developer with 2 years of experience in React, Angular, JavaScript, HTML, and CSS. I also have a basic knowledge of Next.js. One of my recent accomplishments was
             optimizing the page score to 75 on Google Lighthouse. Additionally, I was responsible for launching our product in Indonesia, where I handled the translation for both React and Angular.
             Recently, I have expanded my skillset to include back-end development using NestJS and have gained a basic understanding of AWS, including load balancers and other services. I am
-            passionate about staying up-to-date with the latest technologies and continuously improving my skills to deliver high-quality, user-friendly web applications.
+            passionate about staying up-to-date with the latest technologies and continuously improving my skills to deliver high-quality, user-friendly web applications. I recently gained experinece in nest.js i have made arround 20 apis.
           </p>
           <a href='#contact' className='btn btn_primary'>
             Let's Talk
