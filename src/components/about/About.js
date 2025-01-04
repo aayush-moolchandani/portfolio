@@ -30,7 +30,7 @@ export default function About() {
             </article>
           </div>
           <p>
-          Results-driven Technical Lead and Senior Full Stack Developer with 8+ years of experience in software development, specializing in frontend optimization, scalable solutions, and cloud-based architecture. Proficient in backend technologies with a strong focus on microfrontend architecture, AWS, and delivering high-performance user interfaces. Adept at managing teams, fostering skill development, and driving innovation through proof of concepts (POCs).
+          Results-driven Technical Lead and Senior Full Stack Developer with 4+ years of experience in software development, specializing in frontend optimization, scalable solutions, and cloud-based architecture. Proficient in backend technologies with a strong focus on microfrontend architecture, AWS, and delivering high-performance user interfaces. Adept at managing teams, fostering skill development, and driving innovation through proof of concepts (POCs).
           </p>
           <a href='#contact' className='btn btn_primary'>
             Let's Talk
