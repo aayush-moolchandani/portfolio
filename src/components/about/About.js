@@ -21,7 +21,7 @@ export default function About() {
             <article className='about_card'>
               <BiAward className='about_icon' />
               <h5>Experience</h5>
-              <small> 2+ Years Working</small>
+              <small> 4+ Years Working</small>
             </article>
             <article className='about_card'>
               <AiOutlineProject className='about_icon' />
