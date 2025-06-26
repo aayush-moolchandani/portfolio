@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './nav.css';
 import { FiMenu, FiX } from 'react-icons/fi';
 
-const sectionIds = ['#', '#about', '#skills', '#project', '#contact'];
+const sectionIds = ['#', '#about', '#skills', '#experience', '#project', '#contact'];
 
 const Nav = () => {
     const [activeNav, setActiveNav] = useState('#');
@@ -44,6 +44,7 @@ const Nav = () => {
                 <a href="#" onClick={() => handleNavClick('#')} className={activeNav === '#' ? 'active' : ''}>Home</a>
                 <a href="#about" onClick={() => handleNavClick('#about')} className={activeNav === '#about' ? 'active' : ''}>About</a>
                 <a href="#skills" onClick={() => handleNavClick('#skills')} className={activeNav === '#skills' ? 'active' : ''}>Skills</a>
+                <a href="#experience" onClick={() => handleNavClick('#experience')} className={activeNav === '#experience' ? 'active' : ''}>Career Journey</a>
                 <a href="#project" onClick={() => handleNavClick('#project')} className={activeNav === '#project' ? 'active' : ''}>Projects</a>
                 <a href="#contact" onClick={() => handleNavClick('#contact')} className={activeNav === '#contact' ? 'active' : ''}>Contact</a>
             </div>
