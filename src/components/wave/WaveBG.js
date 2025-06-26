@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 // Each entry: { top, color } for each section (vh units for vertical position)
@@ -11,6 +11,35 @@ const HIGHLIGHTS = [
 
 export default function WaveBG({ sectionRefs }) {
   const barRef = useRef();
+  const [barStyle, setBarStyle] = useState(() => {
+    // On first render, pick the color/position for the current scroll
+    if (!sectionRefs) {
+      return {
+        top: HIGHLIGHTS[0].top,
+        color: HIGHLIGHTS[0].color,
+      };
+    }
+    // Try to match the logic in getActiveSection
+    const sections = sectionRefs
+      ? [sectionRefs.aboutRef, sectionRefs.skillsRef, sectionRefs.projectRef, sectionRefs.contactRef]
+      : [];
+    let idx = 0;
+    const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const ref = sections[i];
+      if (ref && ref.current) {
+        const top = ref.current.getBoundingClientRect().top + scrollY;
+        if (scrollY + window.innerHeight / 3 >= top) {
+          idx = i;
+          break;
+        }
+      }
+    }
+    return {
+      top: HIGHLIGHTS[idx].top,
+      color: HIGHLIGHTS[idx].color,
+    };
+  });
 
   useEffect(() => {
     if (!sectionRefs) return;
@@ -35,10 +64,12 @@ export default function WaveBG({ sectionRefs }) {
 
     function updateBar() {
       const idx = getActiveSection();
-      const { color } = HIGHLIGHTS[idx];
+      const { color, top } = HIGHLIGHTS[idx];
+      setBarStyle({ color, top });
       gsap.to(barRef.current, {
         background: `linear-gradient(90deg, transparent 0%, ${color} 10%, ${color} 90%, transparent 100%)`,
-        duration: 0.05,
+        top,
+        duration: 0.15,
         ease: 'power2.inOut',
       });
     }
@@ -52,7 +83,7 @@ export default function WaveBG({ sectionRefs }) {
     };
   }, [sectionRefs]);
 
-  // Initial style: behind About
+  // Initial style: match the current scroll position
   return (
     <div
       style={{
@@ -71,15 +102,15 @@ export default function WaveBG({ sectionRefs }) {
         style={{
           position: 'absolute',
           left: '0vw',
-          top: '50vh',
+          top: barStyle.top,
           transform: 'translateY(-50%)',
           width: '100vw',
           height: '12rem',
           borderRadius: '6rem',
-          background: 'linear-gradient(90deg, transparent 0%, #ffe066 10%, #ffe066 90%, transparent 100%)',
+          background: `linear-gradient(90deg, transparent 0%, ${barStyle.color} 10%, ${barStyle.color} 90%, transparent 100%)`,
           filter: 'blur(56px)',
           opacity: 0.72,
-          transition: 'background 0.1s',
+          transition: 'background 0.1s, top 0.15s',
         }}
       />
     </div>
