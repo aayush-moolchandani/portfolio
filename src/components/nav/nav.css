@@ -13,9 +13,21 @@ nav {
   box-shadow: 0 2px 16px rgba(0,0,0,0.04);
 }
 
+.nav-hamburger {
+  display: none;
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 21;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
 nav .nav-links {
   display: flex;
   gap: 2.5rem;
+  transition: none;
 }
 
 nav a {
@@ -53,11 +65,59 @@ nav a:hover:after {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   nav .nav-links {
     gap: 1.2rem;
   }
   nav {
     height: 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-hamburger {
+    display: block;
+  }
+  nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70vw;
+    max-width: 320px;
+    background: rgba(20, 20, 20, 0.98);
+    box-shadow: 2px 0 24px rgba(0,0,0,0.12);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 2rem 2rem 2rem;
+    gap: 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+    z-index: 20;
+  }
+  nav .nav-links.open {
+    transform: translateX(0);
+  }
+  nav .nav-links a {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 15;
+    animation: fadeIn 0.2s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  nav {
+    justify-content: flex-start;
   }
 }
