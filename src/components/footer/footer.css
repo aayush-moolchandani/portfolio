@@ -1,0 +1,103 @@
+footer {
+    background: var(--color-footer-accent);
+    padding: 3.5rem 0 1.5rem 0;
+    text-align: center;
+    font-size: 1.05rem;
+    margin-top: 7rem;
+    border-top: 2.5px solid var(--color-primary);
+    box-shadow: 0 -2px 24px 0 rgba(0,170,255,0.08);
+}
+
+footer a {
+    color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+}
+
+.footer_logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.2rem;
+    display: inline-block;
+    letter-spacing: 0.12em;
+    color: var(--color-white);
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+    margin: 0 auto 2.5rem;
+    padding: 0;
+}
+
+.permalinks a {
+    color: var(--color-primary);
+    font-size: 1.08rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    position: relative;
+    padding-bottom: 2px;
+}
+.permalinks a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+.permalinks a:hover:after {
+    width: 100%;
+}
+
+.footer_socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer_socials a {
+    background: var(--color-bg-variant);
+    color: var(--color-primary);
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    border: 2px solid var(--color-primary-variant);
+    font-size: 1.3rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px 0 rgba(0,170,255,0.08);
+}
+.footer_socials a:hover {
+    background: var(--color-primary);
+    color: var(--color-footer-accent);
+    box-shadow: 0 4px 24px 0 rgba(0,170,255,0.18);
+}
+
+.footer_copyright {
+    margin-bottom: 0;
+    color: var(--color-light);
+    font-size: 0.98rem;
+    letter-spacing: 0.04em;
+}
+
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer_socials {
+        margin-bottom: 2rem;
+    }
+    .footer_logo {
+        font-size: 1.5rem;
+    }
+} 

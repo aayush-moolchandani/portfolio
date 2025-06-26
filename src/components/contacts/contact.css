@@ -1,34 +1,54 @@
-.contact_container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:1.5rem;
+.container.contact_container {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact_options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact_option {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
     text-align: center;
-    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    flex: 1;
 }
-.contact_option{
-  background-color: var(--color-bg-variant);
-  padding: 1rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  transition: var(--transition);
-}
-.contact_option:hover{
-    background-color: transparent;
+
+.contact_option:hover {
+    background: transparent;
     border-color: var(--color-primary-variant);
-    cursor: default;
 }
+
+.contact_option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact_option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
 @media screen and (max-width: 1024px) {
-    .contact_container {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.2rem;
+    .container.contact_container {
+        width: var(--container-wd-md);
     }
-  }
-  
-  /* ========== sm devices ======= */
-  
-  @media screen and (max-width: 570px) {
-    .contact_container {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    } 
-   }
+}
+
+@media screen and (max-width: 600px) {
+    .container.contact_container {
+        width: var(--container-wd-ms);
+    }
+    .contact_options {
+        flex-direction: column;
+    }
+}

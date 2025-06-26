@@ -1,41 +1,36 @@
 import React from "react";
 import mine from "../../assets/abt_me.webp";
-import { BiAward } from "react-icons/bi";
-import { AiOutlineProject } from "react-icons/ai";
+import { motion } from 'framer-motion';
 import "./about.css";
 
 export default function About() {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
       <div className='container about_container'>
-        <div className='about_me'>
+        <motion.div
+          className='about_me'
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
+          viewport={{ once: true }}
+        >
           <div className='about_me-img'>
-            <img src={mine} alt='me' />
+            <img src={mine} alt='me' loading="lazy" />
           </div>
-        </div>
-
-        <div className='about_content'>
-          <div className='about_cards'>
-            <article className='about_card'>
-              <BiAward className='about_icon' />
-              <h5>Experience</h5>
-              <small> 4+ Years Working</small>
-            </article>
-            <article className='about_card'>
-              <AiOutlineProject className='about_icon' />
-              <h5>Projects</h5>
-              <small> 15+ Projects </small>
-            </article>
-          </div>
+        </motion.div>
+        <motion.div
+          className='about_content'
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: 'easeOut', delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h2 style={{color:'#222', fontWeight:600, fontSize:'2.2rem', marginBottom:'1.2rem'}}>About Me</h2>
           <p>
-          Results-driven Technical Lead and Senior Full Stack Developer with 4+ years of experience in software development, specializing in frontend optimization, scalable solutions, and cloud-based architecture. Proficient in backend technologies with a strong focus on microfrontend architecture, AWS, and delivering high-performance user interfaces. Adept at managing teams, fostering skill development, and driving innovation through proof of concepts (POCs).
+            Senior Software Developer with 5+ years of experience designing and developing web and mobile applications using React, Next.js, Angular, React Native, and NestJS. Adept in building modular architectures, optimizing performance, and implementing CI/CD pipelines. Proven track record in leading frontend teams, delivering production-grade applications, and aligning engineering goals with business KPIs. Strong focus on clean code, reusability, and modern web standards.
           </p>
-          <a href='#contact' className='btn btn_primary'>
-            Let's Talk
-          </a>
-        </div>
+          <a href='#contact' className='btn btn-primary'>Let's Talk</a>
+        </motion.div>
       </div>
     </section>
   );

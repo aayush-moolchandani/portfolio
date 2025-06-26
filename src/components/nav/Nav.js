@@ -1,32 +1,44 @@
-import React, { useState } from "react";
-import { AiOutlineHome, AiOutlineContacts, AiOutlineProject } from "react-icons/ai";
-import { SiAboutdotme } from "react-icons/si";
-import { BsBook } from "react-icons/bs";
-import { RiServiceLine } from "react-icons/ri";
-import "./nav.css";
+import React, { useEffect, useState } from 'react';
+import './nav.css';
 
-export default function Nav() {
-  const [active, setActive] = useState(0);
-  return (
-    <nav>
-      <a href='#' className={active === 0 ? "active" : null} onClick={() => setActive(0)}>
-        <AiOutlineHome />
-      </a>
-      <a href='#about' className={active === 1 ? "active" : null} onClick={() => setActive(1)}>
-        <SiAboutdotme />
-      </a>
-      <a href='#experince' className={active === 2 ? "active" : null} onClick={() => setActive(2)}>
-        <BsBook />
-      </a>
-      <a href='#service' className={active === 3 ? "active" : null} onClick={() => setActive(3)}>
-        <RiServiceLine />
-      </a>
-      <a href='#project' className={active === 4 ? "active" : null} onClick={() => setActive(4)}>
-        <AiOutlineProject />
-      </a>
-      <a href='#contact' className={active === 5 ? "active" : null} onClick={() => setActive(5)}>
-        <AiOutlineContacts />
-      </a>
-    </nav>
-  );
+const sectionIds = ['#', '#about', '#skills', '#project', '#contact'];
+
+const Nav = () => {
+    const [activeNav, setActiveNav] = useState('#');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            let found = '#';
+            for (let i = sectionIds.length - 1; i >= 0; i--) {
+                const id = sectionIds[i] === '#' ? 'header' : sectionIds[i].replace('#', '');
+                const el = document.getElementById(id);
+                if (el) {
+                    const top = el.getBoundingClientRect().top + window.scrollY;
+                    if (scrollY + 80 >= top) { // 80px offset for nav height
+                        found = sectionIds[i];
+                        break;
+                    }
+                }
+            }
+            setActiveNav(found);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // set on mount
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <nav>
+            <div className="nav-links">
+                <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>Home</a>
+                <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}>About</a>
+                <a href="#skills" onClick={() => setActiveNav('#skills')} className={activeNav === '#skills' ? 'active' : ''}>Skills</a>
+                <a href="#project" onClick={() => setActiveNav('#project')} className={activeNav === '#project' ? 'active' : ''}>Projects</a>
+                <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}>Contact</a>
+            </div>
+        </nav>
+    )
 }
+
+export default Nav;
