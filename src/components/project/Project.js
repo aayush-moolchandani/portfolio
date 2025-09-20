@@ -6,13 +6,21 @@ import img2 from "../../assets/partnerapp.png";
 import img3 from "../../assets/userapp.png";
 import img4 from "../../assets/pizza.jpeg";
 import img5 from "../../assets/nextjs.png";
+import img5 from "../../assets/study.png";
+
 
 const projects = [
   {
     img: img1,
     title: 'Portfolio Website',
-    desc: 'Personal portfolio built using Next.js and Tailwind CSS.',
+    desc: 'Personal portfolio built using React and Tailwind CSS.',
     btn: { text: 'Live Demo', href: '#' }
+  },
+  {
+    img: img1,
+    title: 'Study Platform',
+    desc: 'Personal study platform built using React and Tailwind CSS.',
+    btn: { text: 'Live Demo', href: 'https://aayushstudyplatform.vercel.app/' }
   },
   {
     img: img2,
