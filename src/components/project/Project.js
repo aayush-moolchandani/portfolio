@@ -6,12 +6,12 @@ import img2 from "../../assets/partnerapp.png";
 import img3 from "../../assets/userapp.png";
 import img4 from "../../assets/pizza.jpeg";
 import img5 from "../../assets/nextjs.png";
-import img5 from "../../assets/study.png";
+import img6 from "../../assets/study.png";
 
 
 const projects = [
   {
-    img: img1,
+    img: img6,
     title: 'Portfolio Website',
     desc: 'Personal portfolio built using React and Tailwind CSS.',
     btn: { text: 'Live Demo', href: '#' }
