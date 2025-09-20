@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import resume from '../../assets/2025_resume.pdf'
+import resume from '../../assets/aayush_resume.pdf'
 import { motion } from 'framer-motion'
 import './header.css'
 
