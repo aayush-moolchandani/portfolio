@@ -11,13 +11,13 @@ import img6 from "../../assets/study.png";
 
 const projects = [
   {
-    img: img6,
+    img: img1,
     title: 'Portfolio Website',
     desc: 'Personal portfolio built using React and Tailwind CSS.',
     btn: { text: 'Live Demo', href: '#' }
   },
   {
-    img: img1,
+    img: img6,
     title: 'Study Platform',
     desc: 'Personal study platform built using React and Tailwind CSS.',
     btn: { text: 'Live Demo', href: 'https://aayushstudyplatform.vercel.app/' }
