@@ -7,7 +7,7 @@ import img3 from "../../assets/userapp.png";
 import img4 from "../../assets/pizza.jpeg";
 import img5 from "../../assets/nextjs.png";
 import img6 from "../../assets/study.png";
-import img7 from "../../assets/Screenshot 2025-10-04 at 7.03.57 PM.png";
+import img7 from "../../assets/wedding-invite.png";
 
 
 const projects = [
