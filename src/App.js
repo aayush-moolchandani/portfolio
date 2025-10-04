@@ -1,4 +1,5 @@
 import React, { useRef, Suspense, lazy } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 
@@ -41,6 +42,7 @@ export default function App() {
       <Suspense fallback={<div>Loading Footer...</div>}>
         <Footer />
       </Suspense>
+      <Analytics />
     </>
   )
 }

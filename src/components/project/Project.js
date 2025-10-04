@@ -7,6 +7,7 @@ import img3 from "../../assets/userapp.png";
 import img4 from "../../assets/pizza.jpeg";
 import img5 from "../../assets/nextjs.png";
 import img6 from "../../assets/study.png";
+import img7 from "../../assets/Screenshot 2025-10-04 at 7.03.57 PM.png";
 
 
 const projects = [
@@ -19,8 +20,14 @@ const projects = [
   {
     img: img6,
     title: 'Study Platform',
-    desc: 'Personal study platform built using React and Tailwind CSS.',
+    desc: 'Built an interactive study platform with categorized coding questions by difficulty and topic.',
     btn: { text: 'Live Demo', href: 'https://aayushstudyplatform.vercel.app/' }
+  },
+  {
+    img: img7,
+    title: 'Wedding Invite Project',
+    desc: 'Beautiful interactive wedding invitation website built with React, Vite, and TypeScript.',
+    btn: { text: 'Live Demo', href: 'https://aayushtanya.vercel.app/' }
   },
   {
     img: img2,
